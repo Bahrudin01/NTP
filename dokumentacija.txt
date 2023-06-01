@@ -1,0 +1,35 @@
+Ovaj program se koristi za upravljanje rasporedima letova. Evo opisa svake od funkcija i struktura podataka:
+
+Struktura: Let
+
+Ova struktura predstavlja jedan let. Sadrži tri polja:
+
+destinacija: Predstavlja destinaciju leta.
+vrijemePolaska: Predstavlja vrijeme polaska leta.
+vrijemeDolaska: Predstavlja vrijeme dolaska leta.
+Funkcija: imaSukob
+
+Ova funkcija provjerava postoji li sukob u rasporedu letova. Prima dva parametra:
+
+letovi: Vektor objekata Let koji predstavljaju zakazane letove.
+noviLet: Objekt Let koji predstavlja novi let koji treba dodati u raspored.
+Funkcija prolazi kroz sve zakazane letove i provjerava da li destinacija i vrijeme novog leta dolaze u sukob s bilo kojim od zakazanih letova. Ako se pronađe sukob, vraća true, inače vraća false.
+Funkcija: prikaziLetove
+
+Ova funkcija se koristi za prikazivanje svih zakazanih letova. Prima vektor objekata Let kao argument. Prolazi kroz sve objekte Let i ispisuje njihove detalje.
+
+Funkcija: upisiFlightLog
+
+Ova funkcija se koristi za zapisivanje zakazanih letova u datoteku. Prima dva argumenta:
+
+letovi: Vektor objekata Let koji predstavljaju zakazane letove.
+imeFajla: Ime datoteke u koju treba zapisati podatke.
+Otvora datoteku u modu za pisanje i zapisuje detalje svakog objekta Let u datoteku.
+Funkcija: main
+
+Ovo je glavna izvršna funkcija. Prvo čita detalje letova iz datoteke pod nazivom "letovi.txt" i provjerava postoji li sukob sa već zakazanim letovima. Ako se ne pronađe sukob, novi detalji leta dodaju se u vektor objekata Let. Zatim predstavlja meni korisniku sa sljedećim opcijama:
+
+Dodaj novi let: Korisniku se traži da unese destinaciju, vrijeme polaska i vrijeme dolaska novog leta. Zatim se provjerava postoji li sukob sa zakazanim letovima i ako ne postoji sukob, novi detalji leta dodaju se u vektor i raspored letova u datoteci se ažurira.
+Prikaz svih registrovanih letova: Poziva funkciju prikaziLetove da prikaže sve zakazane letove.
+Izlaz: Zapisuje konačni raspored letova u datoteku i izlazi iz programa.
+Za bilo koji drugi unos korisnika, prikazuje se poruka o grešci i meni se ponovo predstavlja. Meni se nastavlja petljati dok korisnik ne odabere izlaz.
